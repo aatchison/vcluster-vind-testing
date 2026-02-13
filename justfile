@@ -5,3 +5,6 @@ set-driver:
 
 create-cluster:
   vcluster create {{ cluster_name }} -f vcluster.yaml
+
+clean-up:
+  vcluster delete {{ cluster_name }}
