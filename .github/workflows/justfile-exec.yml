@@ -1,0 +1,31 @@
+
+---
+name: justfile-exec
+
+concurrency:
+  group: run
+  cancel-in-progress: true
+
+on:
+  push:
+    branches:
+      - "**"
+
+jobs:
+  # This job detects which parts of the repo have been changed, setting future jobs up for conditional behavior.
+  justfile-exec:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v3
+
+      - name: Install justfile
+        uses: taiki-e/install-action@just
+        with:
+          justfile: ./justfile
+
+      - name: Run justfile commands
+        run: |
+          just --list
+          just all
+      
