@@ -19,13 +19,8 @@ jobs:
       - name: Check out code
         uses: actions/checkout@v3
 
-      - name: Install justfile
-        uses: taiki-e/install-action@just
-        with:
-          justfile: ./justfile
-
-      - name: Run justfile commands
-        run: |
-          just --list
-          just all
+      - name: Run make ci-build in dev container
+        uses: devcontainers/ci@v0.3
+        push: never
+        runCmd: just all
       
