@@ -13,7 +13,7 @@ create-pod:
   kubectl apply -f nginx-pod.yml
 
 wait-for-pod:
-  kubectl wait --for=condition=ready pod/nginx-pod --timeout=120s
+  kubectl wait --for=condition=ready pod/nginx-pod --timeout=360s
 
 get-pods:
   kubectl get pods
