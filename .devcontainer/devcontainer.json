@@ -7,7 +7,8 @@
 	"features": {
 		"ghcr.io/rio/features/vcluster:1": {},
 		"ghcr.io/jsburckhardt/devcontainer-features/just:1": {},
-		"ghcr.io/devcontainers/features/docker-in-docker:2": {}
+		"ghcr.io/devcontainers/features/docker-in-docker:2": {},
+		"ghcr.io/devcontainers-extra/features/kubectl-asdf:2": {}
 	}
 
 	// Features to add to the dev container. More info: https://containers.dev/features.
