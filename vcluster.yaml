@@ -8,7 +8,7 @@ experimental:
     
     # Load balancer and registry proxy are enabled by default
     # No need to explicitly enable them
-  controlPlane:
-    distro:
-      k8s:
-        version: "v1.35.1-full"  # or any supported Kubernetes version
+controlPlane:
+  distro:
+    k8s:
+      version: "v1.35.1"  # or any supported Kubernetes version
