@@ -21,6 +21,7 @@ jobs:
 
       - name: Run make ci-build in dev container
         uses: devcontainers/ci@v0.3
-        push: never
-        runCmd: just all
+        with:
+          push: never
+          runCmd: just all
       
